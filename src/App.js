@@ -2,11 +2,6 @@ import React, { Component } from 'react';
 import ListContacts from './ListContacts';
 
 class App extends Component {
-  constructor() {
-    super();
-    this.removeContact = this.removeContact.bind(this);
-  }
-
   state = {
     contacts: [
       {
@@ -31,10 +26,10 @@ class App extends Component {
   }
 
   removeContact = (contact) => {
-    this.setState((state) => {
-      return { contacts: state.contacts.filter((c) => c.id !== contact.id) }
-    });
-    console.log(this.state.contacts);
+    debugger;
+    this.setState((state) => ({
+      contacts: state.contacts.filter((c) => c.id !== contact.id)
+    }));
   }
 
   render() {
